@@ -31,9 +31,15 @@
 
 **Install Python Requirements, Run** pip install -r requirements.txt
 
-**Install a new Python Package, Run** pip install A_Fake_Python_Package | https://pypi.org
+**Install a new Python Package, Run** pip install A_Python_Package | https://pypi.org
 
 **When you Install additional Python Packages, to update the requirements.txt file, Run** pip freeze > requirements.txt
+
+**Create a .env file in the root directory**
+
+**run: py manage.py makemigrations**
+
+**run: py manage.py migrate**
 
 
 ### Setup Node.js and Build Frontend files
@@ -48,7 +54,11 @@
 
 **Install npm package React.js, RUN:** npm install --save react react-dom
 
-**To build your frontend files, RUN:** npm run dev
+**To build your frontend files, RUN:** npm run dev   |   Leave this running in the background so node watches for any changes to the frontend assets/ folder
+
+**Open another vs code terminal or cli, cd into main directory RUN:** py manage.py runserver
+
+##### Now Your Project is ready and you should be ready to start development, and digest the code structure. visit http://127.0.0.1:8000/ to see the project example: Apps, API, Content pages
 
 "dev": "webpack --mode development --watch"  *This allows you to watch for changes made in the asset/ folder, when a build input file chnages, the frontend bundle files are re-built*
 
