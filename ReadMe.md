@@ -16,7 +16,7 @@
 * JavaScript | React.js     https://react.dev/
 * CSS | BootStrap   https://getbootstrap.com/docs/
 
-<img class="img-fluid" src="static/images/branding/logo.png" style="height: 500px; width: auto;">
+<img class="img-fluid" src="static/images/screenshots/landing_page.png" style="height: 500px; width: auto;">
 
 ## SET UP
 
