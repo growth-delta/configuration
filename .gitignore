@@ -2,7 +2,7 @@ venv
 .env
 na/
 node_modules/
-# bundles/
+bundles/
 db.sqlite3
 static_root/
 workbook.xlsx
