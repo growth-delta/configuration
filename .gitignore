@@ -1,6 +1,11 @@
-/workbook.xlsx
-/venv
-/.env
+workbook.xlsx
+venv
+.env
 na/
 node_modules/
 bundles/
+.idea
+*.pyc
+*~
+db.sqlite3
+static_root/
