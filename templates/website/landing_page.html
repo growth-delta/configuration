@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block meta %}
+  <!-- On Page META SEO -->
+  <title>{% block page_title %} Landing Title {% endblock %}</title>
+  <meta name="description" content="{% block description %} Landing Description {% endblock %}">
+  <meta name="keywords" content="{% block keywords %} Landing KeyWords {% endblock %}">
+{% endblock meta %}
+
+{% block body %}
+  {% include "website/components/hero.html" %}
+{% endblock %}
+

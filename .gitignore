@@ -1,11 +1,8 @@
-workbook.xlsx
 venv
 .env
 na/
 node_modules/
-bundles/
-.idea
-*.pyc
-*~
+# bundles/
 db.sqlite3
 static_root/
+workbook.xlsx

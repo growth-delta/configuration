@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block meta %}
+  <!-- On Page META SEO -->
+  <title>{% block page_title %} Example Hybrid React Component {% endblock %}</title>
+  <meta name="description" content="{% block description %} Description {% endblock %}">
+  <meta name="keywords" content="{% block keywords %} KeyWords {% endblock %}">
+{% endblock meta %}
+
+{% block body %}
+  <h2>This HTML Table is a React.js Component, the data is from the RestFul API</h2>
+
+  <hr>
+
+  <div id="table"></div>
+
+  <h4>This is the hero section and illustrates how to use react components in your django templates</h4>
+
+  {% include "website/components/hero.html" %}
+  
+{% endblock %}
+
+{% block page_js %}
+    <script type="text/javascript" src="{% static 'JavaScript/bundles/Table-bundle.js' %}"></script>
+{% endblock page_js %}
