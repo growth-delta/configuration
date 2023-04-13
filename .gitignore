@@ -1,0 +1,6 @@
+/workbook.xlsx
+/venv
+/.env
+na/
+node_modules/
+bundles/

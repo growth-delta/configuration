@@ -1,0 +1,22 @@
+[
+    {"id": "1", "fact": "The Earth's atmosphere is made up of several layers, including the troposphere (where we live), the stratosphere (where airplanes fly), and the mesosphere (where meteors burn up)."},
+    {"id": "2", "fact": "The human body is made up of trillions of cells, each with a specific function. There are muscle cells, nerve cells, and even cells that help us see and hear."},
+    {"id": "3", "fact": "The speed of light is the fastest speed at which anything can travel in the universe. It's around 186,000 miles per second!"},
+    {"id": "4", "fact": "The periodic table of elements is a chart that shows all the known elements in the universe. Each element has its own unique properties, like its atomic number and weight."},
+    {"id": "5", "fact": "Photosynthesis is the process by which plants make food. They use energy from the sun to convert carbon dioxide and water into glucose, a type of sugar."},
+    {"id": "6", "fact": "The brain is the control center of the body. It controls everything we do, from breathing and sleeping to thinking and feeling."},
+    {"id": "7", "fact": "Gravity is the force that pulls objects toward each other. It's what keeps us on the ground and makes the planets orbit the sun."},
+    {"id": "8", "fact": "The DNA molecule is the blueprint for all living things. It contains all the information needed to make an organism, like its eye color, height, and even its personality traits."},
+    {"id": "9", "fact": "The Big Bang is the event that created the universe as we know it. It happened around 13.8 billion years ago and is still expanding today."},
+    {"id": "10", "fact": "Evolution is the process by which species change over time. It happens because of genetic mutations that can either help or hurt an organism's chances of survival and reproduction."},
+    {"id": "11", "fact": "The first stock market was established in Amsterdam in the early 1600s, enabling investors to buy and sell shares of companies for the first time."}, 
+    {"id": "12", "fact": "Adam Smith, a Scottish philosopher and economist, is often called the father of modern economics. His book, 'The Wealth of Nations', is a seminal work in the field."}, 
+    {"id": "13", "fact": "The Gold Standard, which linked currencies to gold, was adopted by many countries in the 19th and early 20th centuries. It was abandoned during World War I due to the high cost of financing the war effort."}, 
+    {"id": "14", "fact": "The Bretton Woods system, established in 1944, tied the value of the US dollar to gold and other currencies to the dollar. It collapsed in 1971 when the US ended the convertibility of dollars to gold."}, 
+    {"id": "15", "fact": "The Marshall Plan, also known as the European Recovery Program, was a US aid program that helped rebuild Western Europe after World War II. It is widely credited with jumpstarting the post-war economic recovery."}, 
+    {"id": "16", "fact": "The OPEC oil embargo of 1973 caused a global energy crisis and led to skyrocketing oil prices. It had a significant impact on the world economy, particularly in the US and Europe."}, 
+    {"id": "17", "fact": "The Reagan Revolution of the 1980s ushered in an era of deregulation and free-market economics. It emphasized tax cuts, reduced government spending, and increased international trade."}, 
+    {"id": "18", "fact": "The collapse of the Soviet Union in 1991 marked the end of the Cold War and the rise of globalization. It opened up new markets and led to increased trade and investment across the world."}, 
+    {"id": "19", "fact": "The 2008 financial crisis, caused by a housing market collapse and a wave of bad loans, led to a global recession and widespread unemployment. It was the worst economic downturn since the Great Depression."}, 
+    { "id": "20", "fact": "Bitcoin, the first decentralized digital currency, was created in 2009. It has since sparked a new wave of interest in cryptocurrencies and blockchain technology."}
+]
