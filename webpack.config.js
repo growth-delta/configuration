@@ -7,7 +7,7 @@ module.exports = {
     Table: './assets/JavaScript/applications/Table/Table.jsx',
   },  // input file
   output: {
-    filename: '[name]-bundle.js',  // output file bundle name
+    filename: '[name]-bundle.js',  // output bundles
     path: path.resolve(__dirname, './static/JavaScript/bundles'),
   },
   module: {

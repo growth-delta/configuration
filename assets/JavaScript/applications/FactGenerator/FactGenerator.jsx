@@ -1,60 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import Fact from './components/Fact.jsx';
+import FactTable from './components/FactTable.jsx';
 
-function Table_Fact() {
-  const [data, setData] = useState([]);
-  const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
+function FactGenerator() {
+  const [displayTable, setDisplayTable] = useState(false);
+  const [fact, setFact] = useState(null);
 
-  useEffect(() => {
-    fetch('http://127.0.0.1:8000/data/api/test/json')
-      .then(response => response.json())
-      .then(data => setData(data));
-  }, []);
+  const toggleDisplay = () => {
+    setDisplayTable(!displayTable);
+  }
 
-  const handleSort = (key) => {
-    let direction = 'ascending';
-    if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {
-      direction = 'descending';
-    }
-
-    const sortedData = [...data].sort((a, b) => {
-      if (a[key] < b[key]) {
-        return direction === 'ascending' ? -1 : 1;
-      }
-      if (a[key] > b[key]) {
-        return direction === 'ascending' ? 1 : -1;
-      }
-      return 0;
-    });
-
-    setData(sortedData);
-    setSortConfig({ key: key, direction: direction });
-  };
+  const fetchFacts = async () => {
+    const response = await fetch("http://127.0.0.1:8000/data/api/test/json");
+    const facts = await response.json();
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    setFact(facts[randomIndex].fact);
+  }
 
   return (
     <div>
-      <h1>Fact Generator React.js Application Example</h1>
-      <table className="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th onClick={() => handleSort('id')}>Id</th>
-            <th className='text-center' onClick={() => handleSort('fact')}>Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(item => (
-            <tr key={item.Link}>
-              <td>{item.id}</td>
-              <td>{item.fact}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h2>This React app has two states Generator and Table, which both fetch data from the API: Facts</h2>
+      <br />
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
+          <button className={`nav-link ${!displayTable && 'active'}`} onClick={toggleDisplay}>
+            Generate Random Fact
+          </button>
+        </li>
+        <li className="nav-item">
+          <button className={`nav-link ${displayTable && 'active'}`} onClick={toggleDisplay}>
+            View Fact Table
+          </button>
+        </li>
+      </ul>
+
+      <br />
+
+      {displayTable ? <FactTable /> : <Fact fetchFacts={fetchFacts} fact={fact} />}
+
     </div>
   );
 }
 
 ReactDOM.render(
-  <Table_Fact />,
+  <FactGenerator />,
   document.getElementById('root')
 );
