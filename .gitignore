@@ -1,8 +1,11 @@
 venv
 # .env
-na/
+*.pyc
+db.sqlite3
+# na/
 node_modules/
 bundles/
-db.sqlite3
 static_root/
 workbook.xlsx
+
+# Un-Comment na/ & .env
