@@ -16,7 +16,7 @@
 * JavaScript | React.js     https://react.dev/
 * CSS | BootStrap   https://getbootstrap.com/docs/
 
-<img class="img-fluid" src="static/images/screenshots/landing_page.png" style="height: 500px; width: auto;">
+<img class="img-fluid" src="/static/images/screenshots/landing_page.png" style="height: 500px; width: auto;">
 
 ## SET UP
 
@@ -115,3 +115,7 @@ Contains the JavaScript files which have been built from your ./asset/javascript
 
 ./static/styles/
 Contains the CSS files which have been built from your ./asset/styles folder. Any changes to your (.css | .scss) should be made in the asset folder file, the frontend should then be rebuilt Run: <code>npm run dev</code>
+
+## Alpine.js
+On the the Landing PAGE you can find two exmaples of Alpine.js which is a lightweight framework for creating js components on page.
+One the apps is a simple counter which uses alpine/javascript to count up and down in incraments on click.

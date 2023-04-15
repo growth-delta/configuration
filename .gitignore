@@ -1,5 +1,5 @@
 venv
-.env
+# .env
 na/
 node_modules/
 bundles/

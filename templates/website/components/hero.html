@@ -26,17 +26,109 @@
 
 <section>
     <hr>
+
     <!-- You can use regular .js like this -->
     <div class="card text-center" x-data="{ count: 0 }">
     <h2 class="card-header">Alpine.js Counter Example</h2>
-    <div class="text-center">
-        </br>
-        <button type="button" class="btn btn-dark w-50" x-on:click="count++">Increment</button>
+    <div class="row p-4">
+        <button type="button" class="btn btn-lg btn-outline-dark w-50 fw-bold" x-on:click="count--">- 1</button>
+        <button type="button" class="btn btn-lg btn-outline-dark w-50 fw-bold" x-on:click="count++">+ 1</button>
     </div>
-    <span class="card-body" x-text="count"></span>
+    <span class="card-body fw-bolder fs-1" x-text="count"></span>
     </div>
+    </br>
+    <div class="container text-center w-25" x-data="{ result: '' }">
+        <div class="calculator card p-4">  
+            <div class="card-header">
+                Alpine.js Calculator
+            </div>
+            <div class="card-body">
+                <div class="result mb-3">
+                    <input type="text" x-model="result" class="form-control" readonly>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '7'">7</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '8'">8</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '9'">9</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '4'">4</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '5'">5</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '6'">6</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '1'">1</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '2'">2</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '3'">3</button>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-secondary btn-block" @click="result += '+'">+</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-primary btn-block" @click="result += '0'">0</button>
+                        </div>
+                        <div class="col-2">
+                        <button class="btn btn-secondary btn-block" @click="result += '.'">.</button>
+                        </div>
+                        <div class="col-2">
+                        <button class="btn btn-secondary btn-block" @click="result += '/'">/</button>
+                        </div>
+                        <div class="col-2">
+                        <button class="btn btn-secondary btn-block" @click="result += '-'">-</button>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <button class="btn btn-secondary btn-block" @click="result += '('">(</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-secondary btn-block" @click="result += ')'">)</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-secondary btn-block" @click="result += '*'">x</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-success btn-block" @click="result = eval(result)">=</button>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-warning btn-block" @click="result = ''">CLEAR</button>
+                        </div>
+                        <script>
+                          window.addEventListener('DOMContentLoaded', () => {
+                            const calculator = Alpine.data('calculator', () => ({
+                              result: '0'
+                            }));
+                          });
+                        </script>
+                </div>
+            </div>
+        </div>
+	</div>
     <hr>
 </section>
+
+
 
 <section>
 
