@@ -1,9 +1,9 @@
 venv
 .env
 *.pyc
+*-bundle.js
 db.sqlite3
 na/
 node_modules/
-bundles/
 static_root/
 workbook.xlsx
