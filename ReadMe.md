@@ -91,13 +91,12 @@ in the scripts /package.json
 6. run migrations if you have updated any model.py files etc.
 
 
-<code>
-    # new_app/App.py
+
+# new_app/App.py
     class WebsiteConfig(AppConfig):
         name = '*applications.*website' # 'applications.' Added to name
         *label = 'website'* # New Line
         default_auto_field = 'django.db.models.BigAutoField'
-</code>
 
 
 ## Notes
