@@ -1,4 +1,4 @@
-# Python Django + Modern JavaScript | NoDe'Django
+# Hybrid: Django + React | Full-Stack Backend + Frontend
 
 
 ## Requirements
@@ -12,9 +12,9 @@
 * Python | Django   https://www.djangoproject.com/re
 * Python | Django Rest Framework    https://www.django-rest-framework.org/
 #### Frontend
-* JavaScript    https://www.w3schools.com/js
-* JavaScript | React.js     https://react.dev/
-* CSS | BootStrap   https://getbootstrap.com/docs/
+* JavaScript | https://www.w3schools.com/js
+* JavaScript | React.js https://react.dev/
+* CSS | BootStrap https://getbootstrap.com/docs/
 
 <img class="img-fluid" src="/static/images/screenshots/landing_page.png" style="height: 500px; width: auto;">
 
@@ -23,42 +23,49 @@
 
 ### Setup Python Environment & Install packages
 
-**Install Virtual Environments in you Base Python** pip install virtualenv | https://pypi.org/project/virtualenv/
+*Install Virtual Environments in you Base Python, Run:*     pip install virtualenv | https://pypi.org/project/virtualenv/
 
-**Create Virtual Environment (venv) in Configuration Folder** virtualenv venv
 
-**Activate the Virtual Python Environment, FOUND-->** /venv/Scripts/activate.ps1
+*Create Virtual Environment (venv) in project Folder*    virtualenv venv
 
-**Install Python Requirements, Run** pip install -r requirements.txt
 
-**Install a new Python Package, Run** pip install A_Python_Package | https://pypi.org
+*Activate the Virtual Python Environment, run: activate.ps1 FOUND-->*   ./venv/Scripts/activate.ps1
 
-**When you Install additional Python Packages, to update the requirements.txt file, Run** pip freeze > requirements.txt
 
-**Create a .env file in the root directory**
+*Install Python Requirements, Run:*     pip install -r requirements.txt
 
-**run: py manage.py makemigrations**
 
-**run: py manage.py migrate**
+*Install a new Python Package, Run:*     pip install A_Python_Package | https://pypi.org
+
+
+*When you Install additional Python Packages, to update the requirements.txt file, Run:*     pip freeze > requirements.txt
+
+*Run:* py manage.py makemigrations
+
+*Run:* py manage.py migrate
+
 
 
 ### Setup Node.js and Build Frontend files
 
-**Initialize Node.js, RUN:** npm init -y
+*Initialize Node.js, Run:*      npm init -y
 
-**Install npm package, RUN:** npm install webpack webpack-cli --save-dev
-**It's a good idea to add '--save' any time you install a npm package in configuration django project**
+*Install npm package, Run:*      npm install webpack webpack-cli --save-dev
+
+**TO avoid errors add '--save' or '--save-dev' any time you install a npm package in this project, Example:** npm install --save mathjs
+
 **This will create a node_modules/ folder, plus package.json & package-lock.json files**
 
-**Install npm package for translating React.js to .js, RUN:** npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-react
+*Install npm package for translating React.js to .js, Run:* npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-react
 
-**Install npm package React.js, RUN:** npm install --save react react-dom
+*Install npm package React.js, Run:* npm install --save react react-dom
 
-**To build your frontend files, RUN:** npm run dev   |   Leave this running in the background so node watches for any changes to the frontend assets/ folder
+*To build your frontend files, Run:* npm run dev   |   Leave this running in the background so node watches for any changes to the frontend/ folder
 
-**Open another vs code terminal or cli, cd into main directory RUN:** py manage.py runserver
+*Open another vs code terminal or cli, cd into main directory Run:* py manage.py runserver
 
 ##### Now Your Project is ready and you should be ready to start development, and digest the code structure. visit http://127.0.0.1:8000/ to see the project example: Apps, API, Content pages
+
 
 "dev": "webpack --mode development --watch"  *This allows you to watch for changes made in the asset/ folder, when a build input file chnages, the frontend bundle files are re-built*
 
@@ -78,10 +85,12 @@ in the scripts /package.json
 **To Create a new DJANGO APP**
 1. cd applications
 2. py manage.py startapp 'new_app'
-3. Modify the apps.py in the new App folder
+3. Modify the apps.py in the new App folder.
 4. Add a urls.py to the new_app
 5. Connect the INSTALLED_APPS in the configuration/settings.py and Connect the URLS to the configuration/urls.py
 6. run migrations if you have updated any model.py files etc.
+
+
 <code>
     # new_app/App.py
     class WebsiteConfig(AppConfig):
@@ -94,28 +103,3 @@ in the scripts /package.json
 ## Notes
 * I use na/ folder in each Django App to contain any files which are not used in the Django App, this is to keep the project clean, these folders are also included in the .gitignore
 
-
-## Structure
-
-#### Configuration Folder
-configuration/ folder is where your Django project is 'configured' aka: settings.py & urls.py ect...
-
-#### Static Folder
-**** Never Put Sensitive DATA in the Static Folder instead you must serve it using DRF and modify the settings to apply appropriate Restriction ****
-
-./static/database/
-Contains any Data which you want to serve statically. Its Important to note any files in the static folders are available to anyone with a web browser and a URL to download/view.
-**This folder should contain files like; .xlsx | .csv | .json etc**
-
-./static/images/
-Contains any Images and Graphic which will be served up to the frontend using {% static 'images/image.png' %}
-
-./static/scripts/
-Contains the JavaScript files which have been built from your ./asset/javascript folder. Any changes to your .js should be made in the asset folder file, the frontend should then be rebuilt Run: <code>npm run dev</code>
-
-./static/styles/
-Contains the CSS files which have been built from your ./asset/styles folder. Any changes to your (.css | .scss) should be made in the asset folder file, the frontend should then be rebuilt Run: <code>npm run dev</code>
-
-## Alpine.js
-On the the Landing PAGE you can find two exmaples of Alpine.js which is a lightweight framework for creating js components on page.
-One the apps is a simple counter which uses alpine/javascript to count up and down in incraments on click.

@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    site: './assets/JavaScript/site.js',
-    FactGenerator: './assets/JavaScript/applications/FactGenerator/FactGenerator.jsx',
-    Table: './assets/JavaScript/applications/Table/Table.jsx',
+    site: './frontend/site.js',
+    FactGenerator: './frontend/applications/FactGenerator/FactGenerator.jsx',
+    Table: './frontend/applications/Table/Table.jsx',
   },  // input file
   output: {
     filename: '[name]-bundle.js',  // output bundles
